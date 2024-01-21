@@ -1,0 +1,23 @@
+<!-- Place the first <script> tag in your HTML's <head> -->
+    <script src="https://cdn.tiny.cloud/1/mga6qjxa66boboihtoj8l0lin5gy207nmmhmemvlvedbp3cd/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <!-- Place the following <script> and <textarea> tags in your HTML's <body> -->
+    <script>
+      tinymce.init({
+        selector: 'textarea',  // Selector for the textarea
+        plugins: 'link image', // Minimal plugins
+        toolbar: 'undo redo | bold italic | link image', // Simplified toolbar
+        menubar: false, // Disable the menu bar for simplicity
+        ai_request: (request, respondWith) => {
+          // Placeholder AI request function
+          respondWith.string(() => {
+            // Implement your AI logic here. This is just a placeholder.
+            return Promise.resolve("AI response placeholder");
+          });
+        },
+      });
+    </script>
+    <textarea>
+      Welcome to TinyMCE!
+    </textarea>
+    
